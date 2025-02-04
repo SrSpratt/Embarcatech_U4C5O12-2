@@ -21,12 +21,14 @@ typedef struct TimerContext {
     uint8_t TurnedOn; // Vai ser usado para armazenar o pino ligado na chamada do temporizador 
     uint8_t VectorSize;
     Pin Pins[3];
+    uint32_t Duration;
 } TimerContext;
 
 
 typedef struct InterruptContext {
     bool CanPress; // Vai ser usado para armazenar o pino ligado na chamada do temporizador 
     uint8_t DebounceBuffer;
+    uint8_t Duration;
 } InterruptContext;
 
 /**

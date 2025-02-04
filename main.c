@@ -10,15 +10,15 @@ int main(){
 
     Pin pins[PINS] = {
         {
-            .Pin = REDLIGHT,
+            .Pin = BLUE,
             .Input = false
         },
         {
-            .Pin = YELLOWLIGHT,
+            .Pin = RED,
             .Input = false
         },
         {
-            .Pin = GREENLIGHT,
+            .Pin = GREEN,
             .Input = false
         },
         {
@@ -29,10 +29,12 @@ int main(){
 
     Configuration(pins, PINS);
     
-    TestButton(pins[3]);
+    SetInterruptionButton(pins[3], 500);
+
+    //TestButton(pins[3]);
     //PrintPin(pins[1]);
     //add_alarm_in_ms(100, HandleToggle, NULL, true);
     //TestLEDs(pins, LIGHTS, 500);
-    FireInOrder(pins, LIGHTS, 3000, 0);
+    //FireInOrder(pins, LIGHTS, 3000, 0);
     uint8_t state;
 }

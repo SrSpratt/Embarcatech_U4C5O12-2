@@ -6,9 +6,9 @@
 /**
  * @brief Definições dos pinos dos LEDs de sinalização.
  */
-#define REDLIGHT 11      // Pino do LED vermelho 
-#define YELLOWLIGHT 12   // Pino do LED amarelo 
-#define GREENLIGHT 13    // Pino do LED verde 
+#define BLUE 11      // Pino do LED vermelho 
+#define RED 12   // Pino do LED amarelo 
+#define GREEN 13    // Pino do LED verde 
 
 typedef struct repeating_timer RepeatingTimer;
 
@@ -27,5 +27,7 @@ bool HandleChangeLED(RepeatingTimer*);
 void TestLEDs(Pin* pins, uint8_t size, uint32_t duration);
 
 int64_t HandleToggle(alarm_id_t id, void *user_data);
+
+int64_t HandleButtonLED(alarm_id_t id, void *user_data);
 
 #endif /* LIGHTS_U4C5_H */

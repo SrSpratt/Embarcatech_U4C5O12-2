@@ -6,5 +6,8 @@
 #include <General_U4C5.h>
 
 void TestButton(Pin);
+void SetInterruptionButton(Pin pin, uint32_t duration);
+void HandleInterrupt();
+
 
 #endif

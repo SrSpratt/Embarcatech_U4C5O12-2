@@ -10,7 +10,7 @@
       "left": 262.75,
       "attrs": { "builder": "pico-sdk" }
     },
-    { "type": "wokwi-led", "id": "led1", "top": 140.4, "left": 71, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "led1", "top": 140.4, "left": 71, "attrs": { "color": "green" } },
     {
       "type": "wokwi-resistor",
       "id": "r1",
@@ -23,7 +23,7 @@
       "id": "led2",
       "top": 188.4,
       "left": 71,
-      "attrs": { "color": "yellow" }
+      "attrs": { "color": "blue" }
     },
     {
       "type": "wokwi-resistor",
@@ -37,7 +37,7 @@
       "id": "led3",
       "top": 236.4,
       "left": 71,
-      "attrs": { "color": "limegreen" }
+      "attrs": { "color": "red" }
     },
     {
       "type": "wokwi-resistor",
