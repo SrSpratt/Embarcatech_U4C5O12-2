@@ -27,7 +27,7 @@ typedef struct TimerContext {
 
 typedef struct InterruptContext {
     bool CanPress; // Vai ser usado para armazenar o pino ligado na chamada do temporizador 
-    uint8_t DebounceBuffer;
+    uint32_t DebounceBuffer;
     uint8_t Duration;
 } InterruptContext;
 

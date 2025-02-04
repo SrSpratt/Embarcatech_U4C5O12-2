@@ -10,12 +10,6 @@
 #define RED 12   // Pino do LED amarelo 
 #define GREEN 13    // Pino do LED verde 
 
-typedef struct repeating_timer RepeatingTimer;
-
-extern RepeatingTimer repeatingTimer;
-void FireInOrder(Pin* pins, uint8_t size, uint32_t duration, uint8_t first);
-
-bool HandleChangeLED(RepeatingTimer*);
 
 /**
  * @brief Testa os LEDs invertendo seu estado por um curto período de tempo.

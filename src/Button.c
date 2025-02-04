@@ -6,8 +6,6 @@ InterruptContext interruptContext = {
     .DebounceBuffer = 0
 };
 
-uint32_t debounceHelper = 0;
-
 void TestButton(Pin pin){
     PrintPin(pin);
     uint8_t state = gpio_get(pin.Pin);
@@ -28,7 +26,7 @@ void SetInterruptionButton(Pin pin, uint32_t duration){
 void HandleInterrupt(){
     uint32_t currentTime = to_ms_since_boot(get_absolute_time());
 
-    if (currentTime - debounceHelper > 200){
+    if (currentTime - interruptContext.DebounceBuffer > 200){
         if (interruptContext.CanPress == 1){
             interruptContext.CanPress = 0;
             timerContext.TurnedOn = 1;
@@ -40,6 +38,6 @@ void HandleInterrupt(){
             if (gpio_get(timerContext.Pins[0].Pin) == 1)
                 printf("NÃO CAPTURA O ESTADO DURANTE A SEQUÊNCIA\n");
         }
-        debounceHelper = currentTime;
+        interruptContext.DebounceBuffer = currentTime;
     }
 }

@@ -1,40 +1,5 @@
 #include <Lights_U4C5.h>
 
-RepeatingTimer repeatingTimer;
-
-void FireInOrder(Pin* pins, uint8_t size, uint32_t duration, uint8_t first){
-    timerContext.VectorSize = size;
-    
-    gpio_put(pins[first].Pin, 1);
-    timerContext.TurnedOn = pins[first].Pin;
-    
-    add_repeating_timer_ms(duration, HandleChangeLED, NULL, &repeatingTimer);
-    //add_alarm_in_ms(duration, HandleChangeLED, NULL, false);
-}
-
-bool HandleChangeLED(RepeatingTimer *t){
-    //printf("context turned on: %d\n", context.TurnedOn);
-    if(timerContext.TurnedOn == BLUE){
-        gpio_put(BLUE, 0);
-        gpio_put(RED, 0);
-        gpio_put(GREEN, 1);
-        timerContext.TurnedOn = GREEN;
-    } else if (timerContext.TurnedOn == GREEN){
-        gpio_put(BLUE, 0);
-        gpio_put(GREEN, 0);
-        gpio_put(RED, 1);   
-        timerContext.TurnedOn = RED;
-    } else {
-        gpio_put(GREEN, 0);
-        gpio_put(RED, 0);
-        gpio_put(BLUE, 1);
-        timerContext.TurnedOn = BLUE;
-    }
-
-    return true;
-}
-
-
 void TestLEDs(Pin* pins, uint8_t size, uint32_t duration){
     for(uint8_t i = 0; i < size; i++){
         gpio_put(pins[i].Pin, !gpio_get(pins[i].Pin));

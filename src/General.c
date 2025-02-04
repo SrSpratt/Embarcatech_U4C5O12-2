@@ -17,8 +17,8 @@ void SetInput(uint8_t pin){
     gpio_init(pin);
     gpio_set_dir(pin, GPIO_IN);
     gpio_pull_down(pin);
-    printf("Pino configurado para entrada: %d\n", gpio_get_dir(pin));
-    printf("Att, entrada: %d\n", gpio_get(pin));
+    //printf("Pino configurado para entrada: %d\n", gpio_get_dir(pin));
+    //printf("Att, entrada: %d\n", gpio_get(pin));
 }
 
 void SetOutput(uint8_t pin){

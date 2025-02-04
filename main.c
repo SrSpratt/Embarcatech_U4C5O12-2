@@ -33,8 +33,6 @@ int main(){
 
     //TestButton(pins[3]);
     //PrintPin(pins[1]);
-    //add_alarm_in_ms(100, HandleToggle, NULL, true);
     //TestLEDs(pins, LIGHTS, 500);
-    //FireInOrder(pins, LIGHTS, 3000, 0);
-    uint8_t state;
+
 }
