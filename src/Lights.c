@@ -3,17 +3,13 @@
 void TestLEDs(Pin* pins, uint8_t size, uint32_t duration){
     for(uint8_t i = 0; i < size; i++){
         gpio_put(pins[i].Pin, !gpio_get(pins[i].Pin));
-        //PrintPin(pins[i]);
         timerContext.Pins[i] = pins[i];
     }
 
-    //sleep_ms(duration);
     timerContext.VectorSize = size;
-    //PrintContext(context);
+
     add_alarm_in_ms(duration, HandleToggle, NULL, false);
 
-    // for(uint8_t i = 0; i < size; i++)
-    //     gpio_put(pins[i].Pin, !gpio_get(pins[i].Pin));
 }
 
 int64_t HandleToggle(alarm_id_t id, void *user_data){
@@ -38,7 +34,6 @@ int64_t HandleToggle(alarm_id_t id, void *user_data){
 }
 
 int64_t HandleButtonLED(alarm_id_t id, void *user_data){
-    //PrintContext(timerContext);
     if(timerContext.TurnedOn == 1){
         gpio_put(BLUE, 1);
         gpio_put(RED, 1);

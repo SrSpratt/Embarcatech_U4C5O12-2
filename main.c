@@ -29,7 +29,7 @@ int main(){
 
     Configuration(pins, PINS);
     
-    SetInterruptionButton(pins[3], 500);
+    SetInterruptionButton(pins[3], 3000);
 
     //TestButton(pins[3]);
     //PrintPin(pins[1]);

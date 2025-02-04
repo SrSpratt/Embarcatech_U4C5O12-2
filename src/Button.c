@@ -12,7 +12,6 @@ void TestButton(Pin pin){
     printf("BOTÃO EM NÍVEL LÓGICO BAIXO\n");
     while(state != 1){
         state = gpio_get(pin.Pin);
-        //printf("Att, entrada: %d\n", state);
     }
     printf("BOTÃO APERTADO\n");
 }
