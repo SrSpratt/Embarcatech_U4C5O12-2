@@ -1,6 +1,6 @@
 #include <General_U4C5.h>
 
-Context context;
+TimerContext timerContext;
 
 void Configuration(Pin* pins, uint8_t size){
     stdio_init_all();
@@ -17,6 +17,8 @@ void SetInput(uint8_t pin){
     gpio_init(pin);
     gpio_set_dir(pin, GPIO_IN);
     gpio_pull_down(pin);
+    printf("Pino configurado para entrada: %d\n", gpio_get_dir(pin));
+    printf("Att, entrada: %d\n", gpio_get(pin));
 }
 
 void SetOutput(uint8_t pin){
@@ -32,12 +34,12 @@ void PrintPin(Pin pin){
     printf("\n");
 }
 
-void PrintContext(Context context){
+void PrintContext(TimerContext timerContext){
     printf("Context ====\n");
-    printf("Vector: %d\n", context.VectorSize);
-    printf("LastState: %d\n", context.TurnedOn);
-    for (uint8_t i = 0; i < context.VectorSize; i++){
-        PrintPin(context.Pins[i]);
+    printf("Vector: %d\n", timerContext.VectorSize);
+    printf("LastState: %d\n", timerContext.TurnedOn);
+    for (uint8_t i = 0; i < timerContext.VectorSize; i++){
+        PrintPin(timerContext.Pins[i]);
     }
     
 }

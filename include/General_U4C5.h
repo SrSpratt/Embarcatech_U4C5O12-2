@@ -21,12 +21,19 @@ typedef struct TimerContext {
     uint8_t TurnedOn; // Vai ser usado para armazenar o pino ligado na chamada do temporizador 
     uint8_t VectorSize;
     Pin Pins[3];
-} Context;
+} TimerContext;
+
+
+typedef struct InterruptContext {
+    bool CanPress; // Vai ser usado para armazenar o pino ligado na chamada do temporizador 
+    uint8_t DebounceBuffer;
+} InterruptContext;
 
 /**
  * @brief Contexto global do temporizador, para armazenar o estado anterior à chamada do callback.
  */
-extern Context context;
+extern TimerContext timerContext;
+extern InterruptContext interruptContext;
 
 /**
  * @brief Configura pinos como entrada ou saída.
@@ -51,7 +58,7 @@ void SetInput(uint8_t pin);
 void SetOutput(uint8_t pin);
 
 void PrintPin(Pin pin);
-void PrintContext(Context context);
+void PrintContext(TimerContext context);
 
 /**
  * @brief Callback do temporizador (ainda vou implementar).
