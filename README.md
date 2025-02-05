@@ -5,9 +5,9 @@
 * Roberto Vítor Lima Gomes Rodrigues
 
 #### Vídeo de funcionamento
-No simulador wokwi:
+###### No simulador wokwi:
 * https://youtu.be/dGH9-NuCWf4
-Na placa BitDogLag:
+###### Na placa BitDogLag:
 * https://youtu.be/JUw4qK8Fp4Y
 
 #### Instruções de compilação
