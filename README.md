@@ -5,7 +5,10 @@
 * Roberto Vítor Lima Gomes Rodrigues
 
 #### Vídeo de funcionamento
+No simulador wokwi:
 * https://youtu.be/dGH9-NuCWf4
+Na placa BitDogLag:
+* https://youtu.be/JUw4qK8Fp4Y
 
 #### Instruções de compilação
 Certifique-se de que você tem o ambiente configurado conforme abaixo:
@@ -26,3 +29,4 @@ Ao final, será necessário apertar novamente o botão para reiniciar a rotina.
 Obs.: apertar o botão durante a execução da rotina não causará efeito, apenas uma mensagem no monitor serial indicando que apertar o botão durante a sequência não causa efeito.
 
 * Obs.: documentei todo o código com doxygen, então ao passar o cursos do mouse em cima de qualquer uma das funções, será mostrada uma pequena descrição da implementação
+* Obs. II: criei um servidor node para pegar as saídas em série da placa, como mostrado no vídeo.
