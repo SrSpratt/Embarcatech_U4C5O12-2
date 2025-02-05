@@ -26,7 +26,7 @@ Ao executar o programa, dever-se-á apertar o botão, que iniciará uma interrup
 * Em seguida, será aceso 1 LED, por mais 3 segundos
 * Por fim, todos os LEDs serão apagados
 * Ao final, será necessário apertar novamente o botão para reiniciar a rotina.
-Obs.: apertar o botão durante a execução da rotina não causará efeito, apenas uma mensagem no monitor serial indicando que apertar o botão durante a sequência não causa efeito.
+  * Obs.: apertar o botão durante a execução da rotina não causará efeito, apenas uma mensagem no monitor serial indicando que apertar o botão durante a sequência não causa efeito.
 
 * Obs.: documentei todo o código com doxygen, então ao passar o cursos do mouse em cima de qualquer uma das funções, será mostrada uma pequena descrição da implementação
 * Obs. II: criei um servidor node para pegar as saídas em série da placa, como mostrado no vídeo.
