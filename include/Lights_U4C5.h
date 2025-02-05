@@ -6,9 +6,9 @@
 /**
  * @brief Definições dos pinos dos LEDs de sinalização.
  */
-#define BLUE 11      // Pino do LED azul 
-#define RED 12       // Pino do LED vermelho 
-#define GREEN 13     // Pino do LED verde 
+#define GREEN 11      // Pino do LED azul 
+#define BLUE 12       // Pino do LED vermelho 
+#define RED 13     // Pino do LED verde 
 
 /**
  * @brief Testa os LEDs invertendo seu estado por um curto período de tempo.
